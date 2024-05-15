@@ -6,8 +6,8 @@ const SignUpForm = () => {
         userName: '',
         password: '',
         phoneNo: '',
-        email:'',
-        address:''
+        email: '',
+        address: ''
     })
 
     const handleChange = (e) => {
@@ -19,6 +19,14 @@ const SignUpForm = () => {
         e.preventDefault();
         console.log(data);
         alert('Your details has been saved successfully.');
+        // Reset form fields after submission
+        setData({
+            userName: '',
+            email: '',
+            password: '',
+            phoneNo:'',
+            address:'',
+        });
     }
 
     return (
